@@ -1,18 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/gray">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/welfareRecommandTitle"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="584dp"
+        android:fontFamily="@font/cookie_run_font"
+        android:gravity="center"
+        android:text="당신을 위한 맞춤복지"
+        android:textColor="@color/black"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/welfareRecommandTitleAdd"
+        android:layout_width="360dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/cookie_run_font"
+        android:gravity="right"
+        android:text="▼더보기"
+        android:textColor="@color/green"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="535dp"
+        android:layout_marginTop="120dp">
+
+        <ImageButton
+            android:id="@+id/recommand3"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/background"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/recommand2"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="21dp" />
+
+        <ImageButton
+            android:id="@+id/recommand1"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/background"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageButton
+            android:id="@+id/recommand5"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+
+
+            android:src="@drawable/background"
+            app:layout_constraintTop_toBottomOf="@+id/recommand4"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="21dp" />
+
+        <ImageButton
+            android:id="@+id/recommand2"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+
+            android:src="@drawable/background"
+            app:layout_constraintTop_toBottomOf="@+id/recommand1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="21dp" />
+
+        <ImageButton
+            android:id="@+id/recommand4"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+
+
+            android:src="@drawable/background"
+            app:layout_constraintTop_toBottomOf="@+id/recommand3"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="21dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+
+        app:menu="@menu/bottom_navigation_menu"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#fff"
+
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="30dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyPageActivity"
+    android:background="@color/gray"
+
+    >
+
+    <TextView
+        android:id="@+id/MyPageTitle"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="584dp"
+        android:fontFamily="@font/cookie_run_font"
+        android:gravity="center"
+        android:text="내 정보"
+        android:textColor="@color/black"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/profile_image"
+        android:layout_width="116dp"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="141dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_person_24"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <ImageButton
+        android:id="@+id/profile_image_gallary"
+        android:layout_width="55dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="146dp"
+        android:layout_marginEnd="65dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_photo_library_24"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <ImageButton
+        android:id="@+id/profile_image_camera"
+        android:layout_width="55dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="285dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_camera_alt_24"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="200dp">
+
+        <TextView
+            android:id="@+id/mywelfareRecommandTitle"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="00dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/cookie_run_font"
+            android:gravity="center"
+            android:text="내 관심 복지 리스트"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mywelfareRecommandTitleAdd"
+            android:layout_width="360dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="28dp"
+            android:fontFamily="@font/cookie_run_font"
+            android:gravity="right"
+            android:text="▼더보기"
+            android:textColor="@color/green"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mywelfareRecommandTitle" />
+
+
+        <ImageButton
+            android:id="@+id/myrecommand2"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+
+            android:src="@drawable/background"
+            app:layout_constraintTop_toBottomOf="@+id/myrecommand1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="14dp" />
+
+        <ImageButton
+            android:id="@+id/myrecommand1"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/background"
+
+            app:layout_constraintTop_toBottomOf="@+id/mywelfareRecommandTitleAdd"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="14dp" />
+
+        <ImageButton
+            android:id="@+id/myrecommand3"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/background"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/myrecommand2"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="14dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/btn_modify"
+        android:layout_width="196dp"
+        android:layout_height="118dp"
+
+        android:layout_above="@+id/bottom_nav"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="605dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/btn_design"
+        android:fontFamily="@font/cookie_run_font"
+        android:text="내정보 수정하기"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+
+        app:menu="@menu/bottom_navigation_menu"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#fff"
+
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="30dp"
+        />
+
+</RelativeLayout>

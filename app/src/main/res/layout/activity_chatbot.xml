@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatbotActivity"
+    android:background="@color/gray">
+
+    <TextView
+        android:id="@+id/MapTitle"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="584dp"
+        android:fontFamily="@font/cookie_run_font"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="편리한 상담을 위한 챗봇"
+         />
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="331dp"
+        android:layout_marginEnd="104dp"
+        android:background="@drawable/btn_design"
+        android:fontFamily="@font/cookie_run_font"
+        android:text="챗봇과 상담하기"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+
+        app:menu="@menu/bottom_navigation_menu"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#fff"
+
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="30dp"
+        />
+
+</RelativeLayout>
