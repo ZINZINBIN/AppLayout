@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--parent layout -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:orientation="vertical">
+
+    <!--main layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background = "#F6FAF6"
+        android:orientation="vertical">
+
+        <include layout = "@layout/toolbar_main"/>
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <!-- chatbot dialogflow-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- 챗봇 화면창 구현(상단 화면, 대화상자 목록)-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id = "@+id/chatList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background = "#ECF3EA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id = "@+id/et_message"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:hint = "Enter Message"
+                        android:inputType="text"
+                        android:layout_height="match_parent">
+                    </EditText>
+
+                    <ImageButton
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/btn_stt"
+                        android:layout_weight="6"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height= "50dp"
+                        android:background="@drawable/btn_design2"
+                        android:src="@drawable/voice"
+                        >
+                    </ImageButton>
+
+                    <Button
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/btn_send"
+                        android:layout_weight="5"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height= "50dp"
+                        android:background="@drawable/btn_design2"
+                        android:text = "보내기"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/cookie_run_font"
+                        >
+
+                    </Button>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav" />
+
+    </LinearLayout>
+
+</LinearLayout>
