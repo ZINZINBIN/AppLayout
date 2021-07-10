@@ -18,7 +18,7 @@
         android:background = "#000000"
         android:orientation="vertical">
 
-        <include layout = "@layout/toolbar_main"/>
+        <include layout = "@layout/toolbar_edit"/>
 
         <FrameLayout
             android:background="#00EC94"

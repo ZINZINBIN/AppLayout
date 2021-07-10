@@ -70,12 +70,16 @@ public class ProfileActivity extends AppCompatActivity {
         // logout 기능 구현:
         btn_logout = findViewById(R.id.btn_logout);
 
-        btn_profile = findViewById(R.id.btn_profile);
+
+        // profile 수정 레이아웃 이동:
+
+        btn_profile = (Button) findViewById(R.id.btn_profile);
         btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               Intent intent = new Intent(ProfileActivity.this, EditActivity.class);
               startActivity(intent);
+              finish();
             }
         });
 

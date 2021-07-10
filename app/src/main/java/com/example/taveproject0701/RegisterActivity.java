@@ -164,7 +164,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         // register process
-        Button btn_RegisEnd = (Button)findViewById(R.id.btn_RegisEnd);
+        Button btn_RegisEnd = (Button)findViewById(R.id.btn_register);
         btn_RegisEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

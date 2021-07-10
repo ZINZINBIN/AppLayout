@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background = "#ECF3EA"
+        android:background = "@color/white"
         android:orientation="vertical">
 
         <include layout = "@layout/toolbar_main"/>
@@ -36,7 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:background="@color/white"
+                    android:background= "#ECF3EA"
                     android:layout_weight="0.14">
 
                     <LinearLayout
@@ -48,8 +48,8 @@
 
                         <ImageButton
                             android:layout_gravity="center"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:id = "@+id/btn_camera"
                             android:background="@null"
                             android:src="@drawable/ic_camera">
@@ -101,8 +101,8 @@
                         android:layout_weight="1">
                         <ImageButton
                             android:layout_gravity="center"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:id = "@+id/btn_img_register"
                             android:background="@null"
                             android:src="@drawable/ic_img">
