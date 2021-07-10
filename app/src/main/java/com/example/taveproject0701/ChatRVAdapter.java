@@ -51,6 +51,18 @@ public class ChatRVAdapter extends RecyclerView.Adapter {
     }
 
     @Override
+    public int getItemViewType(int position){
+      switch(chatsModelArrayList.get(position).getSender()){
+          case "user":
+              return 0;
+          case "bot":
+              return 1;
+          default:
+              return -1;
+      }
+    }
+
+    @Override
     public int getItemCount() {
         return chatsModelArrayList.size();
     }

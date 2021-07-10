@@ -7,16 +7,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ProfileActivity extends AppCompatActivity {
+
+
     // page 내 기능 구현:
+
+    private static final int REQUEST_IMAGE_CAPTURE = 672;
+    private String imageFilePath;
+    private Uri photoUri;
+    private ImageButton btn_logout;
+    private Button  btn_profile;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +67,19 @@ public class ProfileActivity extends AppCompatActivity {
                 return false;
             }
         });
+        // logout 기능 구현:
+        btn_logout = findViewById(R.id.btn_logout);
+
+        btn_profile = findViewById(R.id.btn_profile);
+        btn_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              Intent intent = new Intent(ProfileActivity.this, EditActivity.class);
+              startActivity(intent);
+            }
+        });
+
+
     }
 
 }
