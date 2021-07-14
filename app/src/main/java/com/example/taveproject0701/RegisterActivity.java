@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -31,6 +32,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     String[] obs_items = {"해당사항 없음","시각 장애", "청각 장애", "지체 장애", "신체 장애","기타"};
     TextView obsSpinner_tv;
+
+
+    // register
+    EditText et_email;
+    EditText et_pwd;
+    EditText et_gender;
+
+    
 
 
 

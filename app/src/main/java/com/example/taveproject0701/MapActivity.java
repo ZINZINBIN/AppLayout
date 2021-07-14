@@ -4,8 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -26,6 +27,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     // map api request
 
     private GoogleMap mMap;
+    private FragmentManager fragmentManager;
+    private MapFragment mapFragment;
 
 
     @Override
@@ -37,8 +40,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        /*
         // map api
         SupportMapFragment mapFragment = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.mapView);
+        mapFragment.getMapAsync(this);
+        */
+
+        fragmentManager = getFragmentManager();
+        mapFragment = (MapFragment)fragmentManager.findFragmentById(R.id.mapView);
         mapFragment.getMapAsync(this);
 
 
@@ -77,16 +86,15 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     @Override
-    public void onMapReady(final GoogleMap googleMap){
+    public void onMapReady(GoogleMap googleMap){
         mMap = googleMap;
         LatLng SEOUL = new LatLng(37.56, 126.97);
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(SEOUL);
         markerOptions.title("Seoul");
-        markerOptions.snippet("Capital City of korea");
         mMap.addMarker(markerOptions);
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 16));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 10));
     }
 
 
