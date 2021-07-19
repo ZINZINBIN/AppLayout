@@ -40,9 +40,9 @@ public class LoginActivity extends AppCompatActivity {
         actionBar.hide();
 
 
-        /*
         // login: volley to send email and password to php server
 
+        /*
         // login complete
         if(SharedPrefManager.getInstance(this).isLoggedIn()){
             finish();
@@ -61,6 +61,8 @@ public class LoginActivity extends AppCompatActivity {
         });
          */
 
+
+
         // test
         Button btn_login = (Button)findViewById(R.id.btn_login);
         btn_login.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +73,8 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
 
         // register click method
         Button btn_register = (Button)findViewById(R.id.btn_register);
@@ -117,7 +121,13 @@ public class LoginActivity extends AppCompatActivity {
                                         userJson.getString("username"),
                                         userJson.getString("email"),
                                         userJson.getString("pwd"),
-                                        userJson.getString("gender")
+                                        userJson.getString("gender"),
+                                        userJson.getString("isFare"),
+                                        userJson.getString("income"),
+                                        userJson.getString("address"),
+                                        userJson.getString("family"),
+                                        userJson.getString("lifecycle"),
+                                        userJson.getString("obstacle")
                                 );
                                 //storing user in shared preferences
                                 SharedPrefManager.getInstance(getApplicationContext()).userLogin(user);
